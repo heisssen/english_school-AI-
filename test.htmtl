@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <title>English Level Test</title>
+    <style>
+        body {
+            background-color: #f3f3f3;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .quiz-block {
+            background-color: #000;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            border: 8px solid #ff0000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .quiz-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .quiz-card {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border: 5px solid #ff0000;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
+        .quiz-card label {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .quiz-card input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .quiz-card input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .quiz-card button {
+            font-weight: bold;
+            border: 3px solid #ff0000;
+            color: #ff0000;
+            background-color: transparent;
+            text-transform: uppercase;
+            padding: 15px 30px;
+            margin-top: 20px;
+        }
+
+        .quiz-card button:hover {
+            background-color: #ff0000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="quiz-block">
+        <h2>Find Your English Level</h2>
+        <div class="quiz-card">
+            <form id="quizForm">
+                <div class="mb-4">
+                    <label>1. How would you introduce yourself in a formal setting?</label><br>
+                    <input type="radio" name="question1" value="a"> Hi, I'm [Name], nice to meet you.<br>
+                    <input type="radio" name="question1" value="b"> Good day, my name is [Name]. It's a pleasure to make
+                    your acquaintance.<br>
+                    <input type="radio" name="question1" value="c"> Yo, what's up? I'm [Name].
+                </div>
+                <div class="mb-4">
+                    <label>2. Which sentence is grammatically correct?</label><br>
+                    <input type="radio" name="question2" value="a"> She don't like ice cream.<br>
+                    <input type="radio" name="question2" value="b"> She doesn't like ice cream.<br>
+                    <input type="radio" name="question2" value="c"> She not likes ice cream.
+                </div>
+                <div class="mb-4">
+                    <label>3. Fill in the blank: "I have been working here _____ three years."</label><br>
+                    <input type="text" name="question3">
+                </div>
+                <div class="mb-4">
+                    <label>4. Choose the correct form: "If I _____ more time, I would travel the world."</label><br>
+                    <input type="radio" name="question4" value="a"> have<br>
+                    <input type="radio" name="question4" value="b"> had<br>
+                    <input type="radio" name="question4" value="c"> has
+                </div>
+                <div class="mb-4">
+                    <label>5. What does "It's raining cats and dogs" mean?</label><br>
+                    <input type="radio" name="question5" value="a"> It's a normal rain.<br>
+                    <input type="radio" name="question5" value="b"> It's raining very heavily.<br>
+                    <input type="radio" name="question5" value="c"> There are animals outside.
+                </div>
+                <div class="mb-4">
+                    <label>6. Translate the following sentence into English: "Elle aime les chats."</label><br>
+                    <input type="text" name="question6">
+                </div>
+                <div class="mb-4">
+                    <label>7. What is the plural form of "mouse"?</label><br>
+                    <input type="radio" name="question7" value="a"> mouses<br>
+                    <input type="radio" name="question7" value="b"> mice<br>
+                    <input type="radio" name="question7" value="c"> mouse
+                </div>
+                <div class="mb-4">
+                    <label>8. Which word best completes this sentence: "I am looking forward _____ seeing
+                        you."</label><br>
+                    <input type="radio" name="question8" value="a"> to<br>
+                    <input type="radio" name="question8" value="b"> for<br>
+                    <input type="radio" name="question8" value="c"> at
+                </div>
+                <div class="mb-4">
+                    <label>9. Write a synonym for "happy":</label><br>
+                    <input type="text" name="question9">
+                </div>
+                <div class="mb-4">
+                    <label>10. What does the word "serendipity" mean?</label><br>
+                    <input type="radio" name="question10" value="a"> An accidental discovery<br>
+                    <input type="radio" name="question10" value="b"> A sad event<br>
+                    <input type="radio" name="question10" value="c"> A type of dance
+                </div>
+                <div class="mb-4">
+                    <label>11. Choose the correct spelling:</label><br>
+                    <input type="radio" name="question11" value="a"> Recieve<br>
+                    <input type="radio" name="question11" value="b"> Receive<br>
+                    <input type="radio" name="question11" value="c"> Receve
+                </div>
+                <div class="mb-4">
+                    <label>12. Which of the following is an adjective?</label><br>
+                    <input type="radio" name="question12" value="a"> Quickly<br>
+                    <input type="radio" name="question12" value="b"> Beautiful<br>
+                    <input type="radio" name="question12" value="c"> Running
+                </div>
+                <div class="mb-4">
+                    <label>13. Which preposition fits best? "She is good _____ playing piano."</label><br>
+                    <input type="radio" name="question13" value="a"> on<br>
+                    <input type="radio" name="question13" value="b"> in<br>
+                    <input type="radio" name="question13" value="c"> at
+                </div>
+                <div class="mb-4">
+                    <label>14. What is the superlative form of "happy"?</label><br>
+                    <input type="radio" name="question14" value="a"> happier<br>
+                    <input type="radio" name="question14" value="b"> happiest<br>
+                    <input type="radio" name="question14" value="c"> most happy
+                </div>
+                <div class="mb-4">
+                    <label>15. Write a short sentence using the word "adventure":</label><br>
+                    <input type="text" name="question15">
+                </div>
+                <button type="button" onclick="submitQuiz()">Submit Answers</button>
+            </form>
+            <p id="quizResult" style="margin-top: 20px; font-size: 1.5rem; font-weight: 600;"></p>
+        </div>
+    </section>
+
+    <script>
+        function submitQuiz() {
+            const answers = {
+                question1: 'b',
+                question2: 'b',
+                question3: 'for',
+                question4: 'b',
+                question5: 'b',
+                question6: 'She likes cats',
+                question7: 'b',
+                question8: 'a',
+                question9: 'joyful',
+                question10: 'a',
+                question11: 'b',
+                question12: 'b',
+                question13: 'c',
+                question14: 'b',
+                question15: 'adventure'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const resultElement = document.getElementById('quizResult');
+
+            for (const [question, correctAnswer] of Object.entries(answers)) {
+                const userAnswer = form.elements[question].value.trim().toLowerCase();
+                if (userAnswer === correctAnswer) {
+                    score++;
+                }
+            }
+
+            let level;
+            if (score >= 13) {
+                level = 'Advanced';
+            } else if (score >= 8) {
+                level = 'Intermediate';
+            } else {
+                level = 'Beginner';
+            }
+
+            resultElement.textContent = `You got ${score} out of ${Object.keys(answers).length} correct! Your English level is: ${level}`;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
