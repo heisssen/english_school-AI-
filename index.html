@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <title>Brutalist Hero Block</title>
+    <style>
+        body {
+            background-color: #f3f3f3;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .hero-block {
+            background-color: #000;
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            border: 8px solid #ff0000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .hero-block h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero-block p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .hero-block ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        .hero-block ul li {
+            margin: 10px 0;
+        }
+
+        .hero-block .subtext {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ff0000;
+        }
+
+        .cta-button {
+            margin-top: 40px;
+            font-weight: bold;
+            border: 3px solid #ff0000;
+            color: #ff0000;
+            background-color: transparent;
+            text-transform: uppercase;
+            padding: 15px 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        .about-block {
+            background-color: #fff;
+            color: #000;
+            padding: 80px 20px;
+            text-align: center;
+            border: 8px solid #000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .about-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .about-block p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .testimonials-block {
+            background-color: #000;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            border: 8px solid #ff0000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .testimonials-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-carousel {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            margin: 20px;
+            border: 5px solid #ff0000;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .courses-block {
+            background-color: #fff;
+            color: #000;
+            padding: 80px 20px;
+            text-align: center;
+            border: 8px solid #000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .courses-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .course-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .course-card {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: 400px;
+            border: 5px solid #ff0000;
+            font-size: 1.2rem;
+            text-align: left;
+            position: relative;
+        }
+
+        .course-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .course-card p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .course-card .course-duration {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ff0000;
+            margin-top: 15px;
+        }
+
+        .course-card .course-level {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ff0000;
+            margin-top: 5px;
+        }
+
+        .team-block {
+            background-color: #000;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            border: 8px solid #ff0000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .team-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .team-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-card {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 40px);
+            max-width: 400px;
+            border: 5px solid #ff0000;
+            font-size: 1.2rem;
+            text-align: left;
+            position: relative;
+        }
+
+        .team-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .team-card p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .faq-block {
+            background-color: #fff;
+            color: #000;
+            padding: 80px 20px;
+            text-align: center;
+            border: 8px solid #000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .faq-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border: 5px solid #ff0000;
+        }
+
+        .accordion-button {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .contact-block {
+            background-color: #000;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            border: 8px solid #ff0000;
+            position: relative;
+            margin: 20px;
+        }
+
+        .contact-block h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .contact-form label {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 3px solid #ff0000;
+            background-color: #f3f3f3;
+            font-size: 1.2rem;
+        }
+
+        .contact-form button {
+            font-weight: bold;
+            border: 3px solid #ff0000;
+            color: #ff0000;
+            background-color: transparent;
+            text-transform: uppercase;
+            padding: 15px 30px;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff0000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero-block">
+        <h1>Learn English Like a Rebel</h1>
+        <p>Say no to boring classes. Say yes to English that actually works.</p>
+        <ul>
+            <li>No textbooks from the 90s. Seriously.</li>
+            <li>Learn how to insult your friends... politely.</li>
+            <li>Master small talk so good, even your barista will be impressed.</li>
+            <li>Real-life slang that won't make you sound like a robot.</li>
+        </ul>
+        <p class="subtext">English that doesn't suck. Guaranteed.*</p>
+        <button class="btn cta-button">Join Now</button>
+        <p class="subtext">*Guarantee void if you think learning can't be fun.</p>
+    </section>
+
+    <section class="about-block">
+        <h2>About Us</h2>
+        <p>We are not your average language school. We're a group of passionate rebels who believe learning English
+            should be anything but boring. Our mission? To make English fun, practical, and relevant to your life.
+            Forget outdated textbooks and lifeless grammar drills. We teach real English for real situations — whether
+            you're planning to travel the world, impress at a job interview, or simply understand the lyrics of your
+            favorite songs. Join us, and let's make learning an adventure.</p>
+    </section>
+
+    <section class="testimonials-block">
+        <h2>Real Rebels. Real Results.</h2>
+        <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial">
+                        <p>"I never thought learning English could be this much fun. Now I can understand all the memes
+                            and even make my own!"</p>
+                        <p class="testimonial-author">- Alex, 21</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial">
+                        <p>"Thanks to this school, I nailed my job interview. The interviewer was impressed with my
+                            slang skills!"</p>
+                        <p class="testimonial-author">- Jamie, 25</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial">
+                        <p>"I used to be scared of talking to strangers in English. Now I can't stop talking! Seriously,
+                            someone help me."</p>
+                        <p class="testimonial-author">- Taylor, 19</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="courses-block">
+        <h2>Courses for Every Rebel</h2>
+        <div class="course-card-container">
+            <div class="course-card">
+                <h3>Survival English</h3>
+                <p>For travelers and adventurers. Learn the basics you need to get by anywhere in the world — from
+                    ordering food to asking for directions. You'll be ready for anything.</p>
+                <p class="course-duration">Duration: 6 weeks</p>
+                <p class="course-level">Level: Beginner</p>
+            </div>
+            <div class="course-card">
+                <h3>Business Banter</h3>
+                <p>For those who want to shine at work. Learn how to communicate confidently in business settings,
+                    handle meetings, and impress your boss without sounding like a robot.</p>
+                <p class="course-duration">Duration: 8 weeks</p>
+                <p class="course-level">Level: Intermediate</p>
+            </div>
+            <div class="course-card">
+                <h3>Slang & Pop Culture</h3>
+                <p>Stay hip, understand the internet, and impress your friends. Learn the kind of English that's
+                    actually spoken today — from TikTok trends to pop culture references.</p>
+                <p class="course-duration">Duration: 4 weeks</p>
+                <p class="course-level">Level: All Levels</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-block">
+        <h2>Meet the Rebels Behind the Revolution</h2>
+        <div class="team-card-container">
+            <div class="team-card">
+                <h3>John Doe</h3>
+                <p>Head Rebel: Expert in slang and memes. Can teach you English while making you laugh.</p>
+            </div>
+            <div class="team-card">
+                <h3>Jane Smith</h3>
+                <p>Business Guru: Knows how to talk the talk in corporate English and loves a good coffee break.</p>
+            </div>
+            <div class="team-card">
+                <h3>Mike Johnson</h3>
+                <p>Adventure Specialist: Loves travel, adventure, and teaching you how to survive in any
+                    English-speaking country.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-block">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What if I miss a class?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Don't worry, we've got you covered! We provide recordings of each class, and you can also
+                        schedule extra help if you need it.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How do I know which course to take?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We offer a simple placement quiz and consultation to help you find the course that's the perfect
+                        fit for you.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Are the classes online or in-person?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        All our classes are available online, so you can learn from anywhere in the world. Just bring
+                        your rebellious spirit!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Do you offer certificates?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, you'll receive a certificate upon completion of your course, proving that you truly are an
+                        English rebel.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What if I'm a total beginner?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        No worries! Our Survival English course is designed for beginners, and our instructors are pros
+                        at making you feel comfortable.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Can I get a refund if I'm not satisfied?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We offer a satisfaction guarantee. If you're not happy within the first two weeks, we'll give
+                        you a full refund. No hard feelings!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        How do I sign up?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                    data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Click the "Join Now" button, fill out a few details, and you're in! It's that easy.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-block">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
